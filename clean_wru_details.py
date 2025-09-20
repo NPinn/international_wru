@@ -49,7 +49,11 @@ for year, details in wru_yearly_breakdown_json.items():
     other_matches_dict = {}
     other_matches = details['other_matches']
     for i, test in enumerate(re.findall(r"(.*)", other_matches)):
-        test = test.replace('[a]', '').replace('[b]', '')
+        test = test.replace('[a]', '')
+        test = test.replace('[b]', '')
+        test = test.replace(' [1]', '')
+        test = test.replace(' [2]', '')
+        test = test.replace(' [3]', '')
         if test != ''and 'main article' not in test.lower():
             match_dict = {}
             try:
