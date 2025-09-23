@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 # Base API URL and headers
 WIKI_API_URL = "https://en.wikipedia.org/w/api.php"
 HEADERS = {
-    "User-Agent": "npinnock_wiki_scraper/0.1.0 (https://github.com/NPinn; nathan.pinnock@hotmail.com)"
+    "User-Agent": "npinnock_wiki_scraper/0.2.0 (https://github.com/NPinn; nathan.pinnock@hotmail.com)"
 }
 
 def fetch_wikipedia_page(title: str) -> dict:
