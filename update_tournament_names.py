@@ -79,6 +79,11 @@ for year, details in wru_data_json.items():
                         tournament['wikipedia_page_name'] = result
 
 print('Manually Populate Remaining Details')
+wru_data_json['2022']['tournaments']['2'].pop('wikipedia_page_name')
+wru_data_json['2022']['tournaments']['2']["wikipedia_page_name"] = ""
+wru_data_json['2006']['tournaments']['5'].pop('wikipedia_page_name')
+wru_data_json['2006']['tournaments']['5']["wikipedia_page_name"] = ""
+
 for year, details in wru_data_json.items():
     if details["tournaments"] != None:
         for i, tournament in details["tournaments"].items():
@@ -100,12 +105,18 @@ for year, details in wru_data_json.items():
                 if year == "2006" and tournament["tournament_name"] == "Pacific tri-nations":
                     tournament["wikipedia_page_name"] = "Women's Pacific Tri-Nations"
                 
+                if year == "2006" and tournament["tournament_name"] == "Elgon Cup":
+                    tournament["wikipedia_page_name"] = "Elgon Cup (women's)"
+                
                 if year == "2009" and tournament["tournament_name"] == "FIRA European Trophy (World Cup Qualifier)":
                     tournament["wikipedia_page_name"] = "2009 FIRA Women's European Trophy"
                 
                 if year == "2009" and tournament["tournament_name"] == "Asia World Cup Qualifier":
                     # Need to Extract #Asian Qualifier Section
                     tournament["wikipedia_page_name"] = "2010 Women's Rugby World Cup qualifying"
+                
+                if year == "2009" and tournament["tournament_name"] == "Elgon Cup":
+                    tournament["wikipedia_page_name"] = "Elgon Cup (women's)"
                 
                 if year == "2010" and tournament["tournament_name"] == "Caribbean Women's Championship":
                     # Need to Extract #Carribian Section
@@ -146,6 +157,10 @@ for year, details in wru_data_json.items():
                 
                 if year == "2021" and tournament["tournament_name"] == "RE World Cup Qualification Tournament World Cup qualifier (Europe)":
                     # Need to Extrect #Europe Section
+                    tournament["wikipedia_page_name"] = "2021 Rugby World Cup qualifying"
+                
+                if year == "2022" and tournament["tournament_name"] == "World Cup qualifier (Final Qualification Tournament)":
+                    # Need to Extrect #Final_Qualification_Tournament Section
                     tournament["wikipedia_page_name"] = "2021 Rugby World Cup qualifying"
                 
                 if year == "2024" and tournament["tournament_name"] == "2025 World Cup South America Qualifier":
