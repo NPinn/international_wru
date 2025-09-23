@@ -1,6 +1,6 @@
 <h1><p align="center">International Women's Rugby Union Data Project</p></h1>
 
-- Author: [Nathan Pinnock](www.linkedin.com/in/nathan-pinnock)
+- Author: [Nathan Pinnock](https://www.linkedin.com/in/nathan-pinnock)
 - Version 0.0.1
 ------
 ## Project Purpose
