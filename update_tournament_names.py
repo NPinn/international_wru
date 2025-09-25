@@ -83,6 +83,8 @@ wru_data_json['2022']['tournaments']['2'].pop('wikipedia_page_name')
 wru_data_json['2022']['tournaments']['2']["wikipedia_page_name"] = ""
 wru_data_json['2006']['tournaments']['5'].pop('wikipedia_page_name')
 wru_data_json['2006']['tournaments']['5']["wikipedia_page_name"] = ""
+wru_data_json["2024"]["tournaments"]["6"].pop('wikipedia_page_name')
+wru_data_json["2024"]["tournaments"]["6"]["wikipedia_page_name"] = ""
 
 for year, details in wru_data_json.items():
     if details["tournaments"] != None:
@@ -145,6 +147,10 @@ for year, details in wru_data_json.items():
                     # Need to Extract Reperchage Section
                     tournament["wikipedia_page_name"] = "2017 Women's Rugby World Cup qualifying"
                 
+                if year == "2018" and tournament["tournament_name"] == "2018 Oceania Rugby Women's Championship":
+                    # Need to Extract Reperchage Section
+                    tournament["wikipedia_page_name"] = "2018 Oceania Rugby Women's Championship"
+                
                 if year == "2019" and tournament["tournament_name"] == "Asian Championship qualifiers":
                     tournament["wikipedia_page_name"] = "2019 Asia Rugby Women's Championship Div 1"
                 
@@ -166,6 +172,10 @@ for year, details in wru_data_json.items():
                 if year == "2024" and tournament["tournament_name"] == "2025 World Cup South America Qualifier":
                     # Need to Extrect #Americas Section
                     tournament["wikipedia_page_name"] = "2025 Women's Rugby World Cup qualifying"
+                
+                if year == "2024" and tournament["tournament_name"] == "Rugby Africa Women's Cup":
+                    # Need to Extrect #Americas Section
+                    tournament["wikipedia_page_name"] = "2024 Rugby Africa Women's Cup"
                 
                 if year == "2025" and tournament["tournament_name"] == "Rugby Europe Conference":
                     tournament["wikipedia_page_name"] = "2025 Rugby Europe Women's Championship"
